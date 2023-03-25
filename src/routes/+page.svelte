@@ -1,5 +1,6 @@
 <script>
     import { onMount } from 'svelte';
+    import Welcome from './welcome.svelte';
     import Index from './index.svelte';
 
     let projects = [];
@@ -10,4 +11,5 @@
     });
 </script>
 
+<Welcome />
 <Index projects={projects}/>
