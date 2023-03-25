@@ -1,11 +1,8 @@
 <script context="module">
-    import { gql, GraphQLClient } from 'graphql-request';
+    import { client } from '$lib/graphql-client';
+    import { gql } from 'graphql-request';
 
     export const load = async () => {
-        const client = new GraphQLClient(
-            import.meta.env.VITE_GRAPHQL_API
-        )
-
         const query = gql`
             query geProjects {
                 projects {
@@ -30,7 +27,25 @@
     export let projects
 </script>
 
-<pre>
-    {JSON.stringify(projects, null, 2)}
-</pre>
+<h1>
+    My Projects
+</h1>
+
+<div>
+    {#each projects as { name, description, sourceCode } }
+        <div>
+            <h2>
+                {name}
+            </h2>
+            <p>
+                {description.slice(0, 80)}...
+            </p>
+            <p>
+                <a href={sourceCode}>
+                    {sourceCode}
+                </a>
+            </p>
+        </div>
+    {/each}
+</div>
   
