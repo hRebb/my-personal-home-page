@@ -22,19 +22,123 @@
             },
         }
     }
+
 </script>
 
 <script>
     export let projects
+
+    let visibleCards = 1;
+    const maxVisibleCards = 3;
+
+    function scrollRight() {
+        if (visibleCards < projects.length) {
+            const currentCard = document.querySelector(`.project-card:nth-child(${visibleCards})`)
+            currentCard.classList.add("shifted");
+            visibleCards++;
+        }
+    }
+
+    function scrollLeft() {
+        if (visibleCards > 1) {
+            visibleCards--;
+            const currentCard = document.querySelector(`.project-card:nth-child(${visibleCards + 2})`);
+            currentCard.classList.remove("shifted");
+        }
+    }
 </script>
 
 <h1>
     My Projects
 </h1>
 
-<div>
-    {#each projects as { name, description, sourceCode } }
-        <ProjectCard {name} {description} {sourceCode} />
+<div class="project-container">
+    {#each projects as { name, description, sourceCode }, i }
+        <div class="project-card {i < visibleCards ? '' : 'hidden'}">
+            <ProjectCard {name} {description} {sourceCode} />
+        </div>
     {/each}
+
+    {#if visibleCards >= 1}
+        <button 
+            on:click={scrollLeft}
+            class="
+                border 
+                border-teal-500 
+                bg-teal-500 
+                text-white 
+                rounded-md px-4 py-2 m-2 
+                transition duration-500 ease 
+                select-none hover:bg-teal-600 
+                focus:outline-none 
+                focus:shadow-outline
+                btn-return"
+        >
+            Return
+        </button>
+    {/if} 
+
+    {#if visibleCards < projects.length}
+        <button 
+            on:click={scrollRight}
+            class="
+                border 
+                border-indigo-500 
+                bg-indigo-500 
+                text-white 
+                rounded-md px-4 py-2 m-2 
+                transition duration-500 ease 
+                select-none 
+                hover:bg-indigo-600 
+                focus:outline-none 
+                focus:shadow-outline 
+                btn-next
+            "   
+        >
+            Next
+        </button>  
+    {/if} 
 </div>
+
+<style>
+    .project-container {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    @keyframes slide-up {
+        0% {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .project-card {
+        min-width: 100%;
+        margin-right: 20px;
+        transition: transform 0.5s ease;
+        animation: slide-up 0.5s ease-out;
+    }
+    .project-card.hidden {
+        transform: translateX(-100%);
+    }
+    .project-card.shifted {
+        transform: translateX(-200%);
+    }
+
+    .project-card:hover {
+        transform: scale(1.05);
+    }
+
+    .btn-return, .btn-next {
+        width: 130px;
+        margin-left: 624px;
+        margin-top: 22px;
+    }
+</style>
   
