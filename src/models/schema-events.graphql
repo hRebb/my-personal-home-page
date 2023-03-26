@@ -1,0 +1,7 @@
+query geEvents{
+    events {
+        date
+        title
+        description
+    }
+}
