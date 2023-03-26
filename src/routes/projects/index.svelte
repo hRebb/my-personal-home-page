@@ -48,7 +48,7 @@
     }
 </script>
 
-<h1>
+<h1 class="title">
     My Projects
 </h1>
 
@@ -101,44 +101,52 @@
 </div>
 
 <style>
-    .project-container {
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-    }
+    .title {
+    background: linear-gradient(90deg, rgba(49,183,231,1) 11%, rgba(0,119,192,1) 92%);
+    color: white;
+    font-size: revert-layer;
+    text-align: center;
+    font-family: initial;
+}
 
-    @keyframes slide-up {
-        0% {
-            opacity: 0;
-            transform: translateY(100%);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+.project-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
 
-    .project-card {
-        min-width: 100%;
-        margin-right: 20px;
-        transition: transform 0.5s ease;
-        animation: slide-up 0.5s ease-out;
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
     }
-    .project-card.hidden {
-        transform: translateX(-100%);
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
-    .project-card.shifted {
-        transform: translateX(-200%);
-    }
+}
 
-    .project-card:hover {
-        transform: scale(1.05);
-    }
+.project-card {
+    min-width: 100%;
+    margin-right: 20px;
+    transition: transform 0.5s ease;
+    animation: slide-up 0.5s ease-out;
+}
+.project-card.hidden {
+    transform: translateX(-100%);
+}
+.project-card.shifted {
+    transform: translateX(-200%);
+}
 
-    .btn-return, .btn-next {
-        width: 130px;
-        margin-left: 624px;
-        margin-top: 22px;
-    }
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.btn-return, .btn-next {
+    width: 130px;
+    margin-left: 624px;
+    margin-top: 22px;
+}
 </style>
   
