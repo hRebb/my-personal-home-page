@@ -31,6 +31,9 @@
     let visibleCards = 1;
     const maxVisibleCards = 3;
 
+    let nextBtn;
+    let returnBtn;
+
     function scrollRight() {
         if (visibleCards < projects.length) {
             const currentCard = document.querySelector(`.project-card:nth-child(${visibleCards})`)
@@ -59,8 +62,8 @@
         </div>
     {/each}
 
-    <div class="btn-container">
-        {#if visibleCards >= 1}
+    <div class="btn-container" class:centerButton={projects.length == 1}>
+        {#if visibleCards >= 2}
             <button 
                 on:click={scrollLeft}
                 class="
@@ -78,7 +81,7 @@
                 Return
             </button>
         {/if} 
-
+    
         {#if visibleCards < projects.length}
             <button 
                 on:click={scrollRight}
@@ -94,7 +97,7 @@
                     focus:outline-none 
                     focus:shadow-outline 
                     btn-next
-                "   
+                "
             >
                 Next
             </button>  
@@ -104,54 +107,65 @@
 
 <style>
     .title {
-    background: linear-gradient(90deg, rgba(49,183,231,1) 11%, rgba(0,119,192,1) 92%);
-    color: white;
-    font-size: revert-layer;
-    text-align: center;
-    font-family: initial;
-}
-
-.project-container {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-@keyframes slide-up {
-    0% {
-        opacity: 0;
-        transform: translateY(100%);
+        background: linear-gradient(90deg, rgba(49,183,231,1) 11%, rgba(0,119,192,1) 92%);
+        color: white;
+        font-size: revert-layer;
+        text-align: center;
+        font-family: initial;
     }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
+
+    .project-container {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
     }
-}
 
-.project-card {
-    min-width: 100%;
-    margin-right: 20px;
-    transition: transform 0.5s ease;
-    animation: slide-up 0.5s ease-out;
-}
-.project-card.hidden {
-    transform: translateX(-100%);
-}
-.project-card.shifted {
-    transform: translateX(-200%);
-}
+    @keyframes slide-up {
+        0% {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 
-.project-card:hover {
-    transform: scale(1.05);
-}
+    .project-card {
+        min-width: 100%;
+        margin-right: 20px;
+        transition: transform 0.5s ease;
+        animation: slide-up 0.5s ease-out;
+    }
 
-.btn-container {
-    margin-left: 470px;
-}
+    .project-card.hidden {
+        transform: translateX(-100%);
+    }
 
-.btn-return, .btn-next {
-    width: 196px;
-    margin-top: 22px;
-}
+    .project-card.shifted {
+        transform: translateX(-200%);
+    }
+
+    .btn-container {
+        text-align:center;
+    }
+
+    .centerButton {
+        display:flex;
+        justify-content:center;
+    }
+
+    .btn-return, .btn-next {
+        width: 196px;
+        margin-top: 22px;
+    }
+
+    .btn-next.hidden {
+        display:none;
+    }
+
+    .btn-return.hidden {
+        display:none;
+    }
 </style>
   
