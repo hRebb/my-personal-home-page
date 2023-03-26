@@ -35,6 +35,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"intersection-observer": "^0.12.2"
+		"intersection-observer": "^0.12.2",
+		"vercel": "^28.18.1"
 	}
 }
