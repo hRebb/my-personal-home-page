@@ -59,45 +59,47 @@
         </div>
     {/each}
 
-    {#if visibleCards >= 1}
-        <button 
-            on:click={scrollLeft}
-            class="
-                border 
-                border-teal-500 
-                bg-teal-500 
-                text-white 
-                rounded-md px-4 py-2 m-2 
-                transition duration-500 ease 
-                select-none hover:bg-teal-600 
-                focus:outline-none 
-                focus:shadow-outline
-                btn-return"
-        >
-            Return
-        </button>
-    {/if} 
+    <div class="btn-container">
+        {#if visibleCards >= 1}
+            <button 
+                on:click={scrollLeft}
+                class="
+                    border 
+                    border-teal-500 
+                    bg-teal-500 
+                    text-white 
+                    rounded-md px-4 py-2 m-2 
+                    transition duration-500 ease 
+                    select-none hover:bg-teal-600 
+                    focus:outline-none 
+                    focus:shadow-outline
+                    btn-return"
+            >
+                Return
+            </button>
+        {/if} 
 
-    {#if visibleCards < projects.length}
-        <button 
-            on:click={scrollRight}
-            class="
-                border 
-                border-indigo-500 
-                bg-indigo-500 
-                text-white 
-                rounded-md px-4 py-2 m-2 
-                transition duration-500 ease 
-                select-none 
-                hover:bg-indigo-600 
-                focus:outline-none 
-                focus:shadow-outline 
-                btn-next
-            "   
-        >
-            Next
-        </button>  
-    {/if} 
+        {#if visibleCards < projects.length}
+            <button 
+                on:click={scrollRight}
+                class="
+                    border 
+                    border-indigo-500 
+                    bg-indigo-500 
+                    text-white 
+                    rounded-md px-4 py-2 m-2 
+                    transition duration-500 ease 
+                    select-none 
+                    hover:bg-indigo-600 
+                    focus:outline-none 
+                    focus:shadow-outline 
+                    btn-next
+                "   
+            >
+                Next
+            </button>  
+        {/if} 
+    </div>
 </div>
 
 <style>
@@ -143,9 +145,12 @@
     transform: scale(1.05);
 }
 
+.btn-container {
+    margin-left: 470px;
+}
+
 .btn-return, .btn-next {
-    width: 130px;
-    margin-left: 624px;
+    width: 196px;
     margin-top: 22px;
 }
 </style>
