@@ -1,0 +1,10 @@
+@font-face {
+        font-family: 'Neucha';
+        src: url('src/Neucha-Regular.ttf');
+    }
+
+body {
+        font-family: 'Neucha', sans-serif;
+        color: #880c0c;
+}
+
