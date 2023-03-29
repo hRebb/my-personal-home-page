@@ -1,1 +1,27 @@
-[]
+[
+    {
+        "name": "Professional Immersion and Technical Board With NOUAS",
+        "date": "February 2021 - March 2021",
+        "description": "Discovery of the IT professions and web development techniques."
+    },
+    {
+        "name": "AFPA Web Developer Certificate",
+        "date": "September 2022 - June 2022",
+        "description": "Web Development professional certificate" 
+    },
+    {
+        "name": "Telework practical internship",
+        "date": "April 2022 - June 2022",
+        "description": "Creation of a web interface for Madame Lucia Gera " 
+    },
+    {
+        "name": "Autoformation",
+        "date": "September 2022 - September 2023",
+        "description": "Period where i learn about some new technologies like Python and C#" 
+    },
+    {
+        "name": "EPSI Developer Certificate (Alternate experience)",
+        "date": "September 2023",
+        "description": "Higher level certification" 
+    }
+]

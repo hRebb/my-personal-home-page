@@ -35,8 +35,8 @@
       </aside>
 </body>
   
-<style lang="scss">
-    @use 'main.css';
+<style>
+    @import 'main.css';
 
     .title {
         background: linear-gradient(90deg, rgba(49,183,231,1) 11%, rgba(0,119,192,1) 92%);
