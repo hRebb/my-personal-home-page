@@ -1,7 +1,0 @@
-query geEvents{
-    events {
-        name
-        date
-        description
-    }
-}

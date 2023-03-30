@@ -1,6 +1,5 @@
 <script>
     import {onMount} from "svelte";
-    import Career from "./career.svelte";
     import Timeline from "$lib/components/timeline.svelte";
 
     let events = [];
