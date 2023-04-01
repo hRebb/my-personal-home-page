@@ -1,15 +1,23 @@
 <script lang="ts">
-    export let images: string[];
-    export let currentIndex: number;
+  export let images: string[] = [];
+  let index = 0;
+
+  function nextImage() {
+    index = (index + 1) % images.length;
+  }
+
+  function previousImage() {
+    index = (index - 1 + images.length) % images.length;
+  }
 </script>
 
-<div class="carousel">
-    <div class="slides" style="transform: translateX(-${currentIndex * 100}%)">
-        {#each images as image }
-            <img src={image} alt="" />
-        {/each}
-    </div>
+<div>
+  <button on:click={previousImage}>Previous</button>
+  <img src={images[index]} alt='' />
+  <button on:click={nextImage}>Next</button>
 </div>
+
+
 
 <style>
     @import './carousel.css';
