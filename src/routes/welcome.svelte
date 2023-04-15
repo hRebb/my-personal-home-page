@@ -37,20 +37,4 @@
   
 <style>
     @import 'main.css';
-
-    .title {
-        background: linear-gradient(90deg, rgba(49,183,231,1) 11%, rgba(0,119,192,1) 92%);
-        font-size: revert-layer;
-        text-align: center;
-    }
-
-    .subtitle {
-        background: linear-gradient(90deg, rgba(49,183,231,1) 11%, rgba(0,119,192,1) 92%);
-        text-align: center;
-    }
-
-    aside {
-        height: 450px;
-        font-size: large;
-    }
 </style>

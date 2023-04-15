@@ -11,3 +11,7 @@
 </script>
 
 <Index projects={projects}/>
+
+<style>
+    @import '../main.css';
+</style>

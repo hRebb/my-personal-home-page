@@ -1,0 +1,15 @@
+.card-title {
+    font-family: 'Neucha', sans-serif;
+    color: #d10000;
+}
+
+.pres {
+    font-family: 'Neucha', sans-serif;
+    background-color: white;
+    color: #880c0c;
+}
+
+.tw-card { 
+    text-align: center; 
+    display: contents;
+}

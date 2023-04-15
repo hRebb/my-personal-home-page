@@ -1,5 +1,10 @@
 [
     {
+      "name": "HTML Translator",
+      "description": "Interface who make translations from Markdown to HTML and vice versa",
+      "sourceCode": "https://github.com/hRebb/html-translator"
+    },
+    {
         "name": "Password Generator",
         "description": "Web Interface who permits to generate passwords. Created using React and TypeScript",
         "sourceCode": "https://github.com/hRebb/password-gen"
