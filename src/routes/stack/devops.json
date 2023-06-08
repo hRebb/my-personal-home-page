@@ -1,0 +1,10 @@
+{
+    "stackTechnique": [
+        "Docker",
+        "Vagrant",
+        "GitHub Actions",
+        "Virtualbox",
+        "SonarQube/SonarCloud",
+        "Azure DevOps"
+    ]
+}

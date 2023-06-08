@@ -35,6 +35,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"flowbite-svelte": "^0.37.4",
 		"intersection-observer": "^0.12.2",
 		"svelte-timeline": "^0.1.2",
 		"vercel": "^28.18.1"

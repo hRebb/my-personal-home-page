@@ -16,7 +16,7 @@ body {
 }
 
 .subtitle {
-        background: linear-gradient(90deg, rgba(49,183,231,1) 11%, rgba(0,119,192,1) 92%);
+        background: linear-gradient(90deg, rgb(255, 255, 255) 11%, rgba(0,119,192,1) 92%);
         text-align: center;
 }
 
