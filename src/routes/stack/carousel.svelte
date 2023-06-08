@@ -18,5 +18,4 @@
 
 <style>
     @import '../main.css';
-    @import './carousel.css';
 </style>
