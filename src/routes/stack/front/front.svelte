@@ -17,6 +17,9 @@
 
 <table>
     <thead>
+        <th>
+            Front-End
+        </th>
         <tr>
             <th>Title</th>
             <th>Badge</th>
@@ -35,15 +38,15 @@
                         <img src="https://img.shields.io/badge/-CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
                     {:else if item === 'SCSS'}
                         <img src="https://img.shields.io/badge/-SCSS-CB6699?style=for-the-badge&logo=sass&logoColor=white" alt="SCSS">
-                    {:else if item === 'JS'}
+                    {:else if item === 'Javascript'}
                         <img src="https://img.shields.io/badge/-Javascript-F0DB4F?style=for-the-badge&logo=javascript&logoColor=323330" alt="Javascript">
-                    {:else if item === 'TS'}
+                    {:else if item === 'Typescript'}
                         <img src="https://img.shields.io/badge/-Typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="Typescript">
-                    {:else if item === 'REACT'}
+                    {:else if item === 'ReactJS'}
                         <img src="https://img.shields.io/badge/-ReactJs-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="ReactJS">
-                    {:else if item === 'BOOTSTRAP'}
+                    {:else if item === 'Bootstrap'}
                         <img src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
-                    {:else if item === 'SVELTE'}
+                    {:else if item === 'Svelte'}
                         <img src="https://img.shields.io/badge/svelte-%23f1413d.svg?style=for-the-badge&logo=svelte&logoColor=white" alt="Svelte">
                     {/if}
                 </td>
