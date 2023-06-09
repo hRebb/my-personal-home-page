@@ -2,6 +2,7 @@
     import Front from "./front/front.svelte";
     import Back from "./back/back.svelte";
     import Devops from "./devops/devops.svelte";
+    import Productivity from "./productivity/productivity.svelte";
 </script>
 
 <h1 class="title">
@@ -22,3 +23,7 @@
     <Devops />
 </div>
 <br>
+
+<div class="container productivity">
+    <Productivity />
+</div>
