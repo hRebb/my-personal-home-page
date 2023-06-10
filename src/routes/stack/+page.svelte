@@ -7,23 +7,27 @@
 
 <h1 class="title">
     My Stack
-  </h1>
+</h1>
 
-<div class="container frontend">
+<div class="stack-tab frontend">
     <Front/>
 </div>
 <br>
 
-<div class="container backend">
+<div class="stack-tab backend">
     <Back />
 </div>
 <br>
 
-<div class="container devops">
+<div class="stack-tab devops">
     <Devops />
 </div>
 <br>
 
-<div class="container productivity">
+<div class="stack-tab productivity">
     <Productivity />
 </div>
+
+<style>
+    @import "./stack.css";
+</style>

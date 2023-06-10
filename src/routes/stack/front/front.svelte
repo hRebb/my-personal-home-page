@@ -17,7 +17,7 @@
 
 <table>
     <thead>
-        <th>
+        <th class="sub">
             Front-End
         </th>
         <tr>
@@ -54,3 +54,9 @@
         {/each}
     </tbody>
 </table>
+
+<style>
+    .sub {
+        padding-left: 180px;
+    }
+</style>

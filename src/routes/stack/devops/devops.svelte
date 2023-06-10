@@ -17,7 +17,7 @@
 
 <table>
     <thead>
-        <th>
+        <th class="sub">
             DevOps Tools
         </th>
         <tr>
@@ -50,3 +50,9 @@
         {/each}
     </tbody>
 </table>
+
+<style>
+    .sub {
+        padding-left: 180px;
+    }
+</style>

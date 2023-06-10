@@ -17,8 +17,8 @@
 
 <table>
     <thead>
-        <th>
-            Productivity and Project Management Tools
+        <th class="sub">
+            Productivity Tools
         </th>
         <tr>
             <th>Title</th>
@@ -56,3 +56,9 @@
         {/each}
     </tbody>
 </table>
+
+<style>
+    .sub {
+        padding-left: 180px;
+    }
+</style>
