@@ -13,4 +13,6 @@ jobs:
     - name: Supprimer l'environnement de production
       uses: strumwolf/delete-deployment-environment@v2.3.0
       with:
-        environment-name: 'Production'
+        token: ${{ secrets.GITHUB_TOKEN }}
+        environment: 'production'
+
