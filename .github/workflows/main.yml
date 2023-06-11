@@ -1,0 +1,16 @@
+name: Supprimer l'environnement de production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  delete-deployment-environment:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Supprimer l'environnement de production
+      uses: strumwolf/delete-deployment-environment@v2.3.0
+      with:
+        environment-name: 'Production'
